@@ -1,0 +1,292 @@
+/*
+	AMO Consultancy - Custom Stype Profile - 02/2024
+	To add it to your style profile, please put this file under "[K2 Installation Folder]\K2 smartforms Runtime\Styles\AMOStyleProfile"
+	and add the following path to your style profile:
+	/Runtime/Styles/AMOStyleProfile/03_AMOStyleProfile.css
+*/
+
+/* Define custom CSS variables for colors */
+.theme-entry.amo{
+	--amo-blue: 	#043A4A;
+	--amo-purple: 	#7D2C86;
+	--amo-red: 		#C12148;
+	--amo-orange: 	#F45C36;
+	--amo-yellow: 	#FBAF47;
+	
+	--amo-light-purple: 	#D8C0DB;
+	--amo-light-red: 		#ECBCC8;
+	--amo-light-orange: 	#FCCEC3;
+	--amo-light-yellow: 	#FEE7C8; 
+}
+
+/* Styling for different color themes */
+/* AMO Variables */
+.theme-entry.amo.amo-purple{
+	--amo-selected-color: var(--amo-purple);
+	--amo-selected-color-2: var(--amo-light-purple);
+	--amo-background-url: url("/Runtime/Styles/AMOStyleProfile/backgrounds/purple.jpg");
+}
+.theme-entry.amo.amo-red{
+	--amo-selected-color: var(--amo-red);
+	--amo-selected-color-2: var(--amo-light-red);
+	--amo-background-url: url("/Runtime/Styles/AMOStyleProfile/backgrounds/red.jpg");
+}
+.theme-entry.amo.amo-orange{
+	--amo-selected-color: var(--amo-orange);
+	--amo-selected-color-2: var(--amo-light-orange);
+	--amo-background-url: url("/Runtime/Styles/AMOStyleProfile/backgrounds/orange.jpg");
+}
+.theme-entry.amo.amo-yellow{
+	--amo-selected-color: var(--amo-yellow);
+	--amo-selected-color-2: var(--amo-light-yellow);
+	--amo-background-url: url("/Runtime/Styles/AMOStyleProfile/backgrounds/yellow.jpg");
+}
+
+/* Body Background */
+body.amo {
+    background-image: var(--amo-background-url);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+/* Google icons */
+.theme-entry.amo .material-symbols-rounded {   
+    font-size: 50px !important;
+}
+
+.theme-entry.amo span .material-symbols-rounded{
+	color: var(--amo-selected-color);
+}
+
+/* Tab */
+.theme-entry.amo.amo-orange .tab-box {
+    position: relative;
+    margin-top: 20px;
+    display: flex;
+    align-items: flex-start;
+}
+.theme-entry.amo.amo-orange .tab-box.tabs-top ul.tab-box-tabs {
+    border-width: 0 0 1px 0;
+    position: relative;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+.theme-entry.amo.amo-orange .form-tabs.tab-box ul.tab-box-tabs li a.tab {
+    margin-top: 5px;
+}
+
+/* Force Form width */
+.theme-entry.amo .runtime-form{
+    width: 100% !important;
+    max-width: 2500px !important;
+}
+
+/* Page Title */
+.theme-entry.amo h1.page-title{
+	text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Banner & Menu */
+/* - Do not display the view title bar */
+.theme-entry.amo .row.custom-banner .view .panel-header,
+.theme-entry.amo .row.custom-menu .view .panel-header{
+	display: none;
+}
+
+/* Menu */
+.theme-entry.amo .row.custom-menu,
+.theme-entry.amo .row.custom-menu .view,
+.theme-entry.amo .row.custom-menu .view .innerpanel>.panel{
+	background-color: transparent;
+}
+.theme-entry.amo .app-menu{
+	padding-bottom: 20px;
+}
+.theme-entry.amo .app-menu .app-menu-section{
+	display: flex;
+}
+.theme-entry.amo .app-menu .app-menu-section-apps{
+	display: flex;
+}
+.theme-entry.amo.amo-purple .app-menu .app-menu-item,
+.theme-entry.amo.amo-yellow .app-menu .app-menu-item  {
+    width: 170px;
+    height: 80px;
+    border-radius: 25px 0px 25px 0px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 10px, rgba(0, 0, 0, 0.2) 0px 2px 10px;
+    margin: 10px;
+    font-size: 17px;
+    text-align-last: center;
+    padding: 20px 10px 20px 10px;
+    cursor: pointer;
+    background-color: rgba(250, 250, 250, 0.8);
+}
+.theme-entry.amo.amo-red .app-menu .app-menu-item {
+    width: 150px;
+    height: 90px;
+    border-radius: 25px 25px 25px 25px;
+    margin: 10px;
+    font-size: 17px;
+    text-align-last: center;
+    padding: 20px 10px 20px 10px;
+    cursor: pointer;
+    background-color: rgba(250, 250, 250, 0.9);
+	border: 1px solid var(--amo-selected-color);
+}
+.theme-entry.amo.amo-orange .app-menu .app-menu-link {
+	font-size: medium;
+}
+.theme-entry.amo.amo-orange .app-menu .app-menu-item.app-menu-category {
+    background-color: var(--amo-selected-color);
+    color: white;
+    display: flex;
+    margin-top: 25px;
+    font-size: 20px;
+    width: 400px;
+}
+.theme-entry.amo.amo-orange .app-menu .app-menu-section-apps {
+    display: block;
+    background-color: white;
+    width: 380px;
+    margin-left: 10px;
+    border-radius: 0px 0px 10px 10px;
+    border: 1px solid var(--amo-orange);
+    border-top: none;
+}
+.theme-entry.amo.amo-orange .app-menu .app-menu-section{
+	display:block;
+}
+.theme-entry.amo.amo-yellow .app-menu .app-menu-section {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.theme-entry.amo.amo-yellow .app-menu .app-menu-section-apps {
+    flex-direction: row-reverse;
+}
+.theme-entry.amo.amo-orange .app-menu .app-menu-item,
+.theme-entry.amo.amo-orange .app-menu .app-menu-item a {
+    display: flex;
+    align-items: center;
+	border-radius: 5px;
+}
+.theme-entry.amo.amo-orange .material-symbols-rounded {
+    font-size: 30px !important;
+    margin: 10px;
+}
+.theme-entry.amo .app-menu .app-menu-item.app-menu-category{
+	background-color: var(--amo-selected-color);
+	color: white;
+}
+.theme-entry.amo .app-menu .app-menu-item.app-menu-category .material-symbols-rounded{
+	color: white;	
+}
+.theme-entry.amo .app-menu .app-menu-item.app-external-link a{
+	text-decoration:none;
+	color: var(--normal-text-color);
+}
+.theme-entry.amo .app-menu .app-menu-link{
+	text-align: -webkit-center;
+}
+.theme-entry.amo.amo-orange .app-menu .app-menu-item  {
+    display: block;
+}
+/* arabic */
+.theme-entry.amo .app-menu-link.arabic{
+	display:none;
+}
+.theme-entry.amo .amo-yellow .app-menu-link.arabic {
+    display: block;
+    font-size: large;
+}
+.theme-entry.amo .amo-yellow .app-menu-link.english {
+    display: none;
+}
+/* Views */
+.theme-entry.amo .view,
+.theme-entry.amo .SourceCode-Forms-Controls-Web-ControlPack-Worklist {
+	box-shadow: 0px 1px 5px 0px #00000024;
+}
+.theme-entry.amo .row.custom-menu .view,
+.theme-entry.amo .row.custom-menu .SourceCode-Forms-Controls-Web-ControlPack-Worklist {
+	box-shadow: none;
+}
+
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {	
+	.theme-entry.amo {
+		--view-background-color: black;
+	}
+}
+
+.theme-entry.amo .picker-input .editable-area .entity>span
+{
+	--pill-background-color : transparent;
+}
+
+/* Views Header - Gradient Color */
+.theme-entry.amo .view .panel-header-wrapper,
+.theme-entry.amo .view-canvas .panel-header-wrapper,
+.theme-entry.amo .view .grid-header-wrapper,
+.theme-entry.amo .view-canvas .grid-header-wrapper{
+	background: linear-gradient(90deg, var(--amo-selected-color),var(--amo-selected-color-2));
+	color: white;
+}
+
+/* Views Border */
+ .theme-entry.amo .view>.innerpanel
+,.theme-entry.amo .view-canvas>.innerpanel{
+	border-radius: var(--view-rounding);
+	border: 1px solid lightgrey;	
+}
+
+ .theme-entry.amo .row.custom-menu .view>.innerpanel
+,.theme-entry.amo .row.custom-menu .view-canvas>.innerpanel{
+	border-radius: none;
+	border: none;	
+}
+
+/* All Footer Size*/
+.theme-entry.amo .grid-footer .toolbar, 
+.theme-entry.amo .grid-footer .toolbars.single .toolbar {
+	min-height: 3.7rem;
+}*
+
+/* All text box watermarks */
+.theme-entry.amo .SFC.SourceCode-Forms-Controls-Web-TextBox.watermark,
+.theme-entry.amo .input-control-watermark {
+	font-size: var(--main-text-size);
+}
+
+.theme-entry.amo .tab-box-body-wrapper {
+	background-color: #FFFFFF87;
+    border: 1px solid #043a4a87;
+}
+
+.theme-entry.amo .tab-box ul.tab-box-tabs li {
+    margin: 0 5px 0 0;
+}
+
+.theme-entry.amo .scroll-wrapper {
+    width: 98%;
+    margin: auto;
+	margin-bottom: 5px;
+	padding-top: 5px;
+}
+
+.theme-entry.amo .tab-box {
+    position: relative;
+    margin-top: 20px;
+}
+
+.amo-yellow .tab-box-tabs {
+    display: flex;
+    flex-direction: row-reverse; /* Reverse the order of list items */
+    align-items: flex-end; /* Align items to the right */
+}
+
+/* Additional styling for list items, you can adjust as needed */
+.amo-yellow .tab-box-tabs li {
+    list-style: none;
+    margin: 5px 0;
+}
+

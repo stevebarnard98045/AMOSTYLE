@@ -1,0 +1,481 @@
+/*
+	AMO CONSULTANCY - Custom Theme - 12/2023
+	/Runtime/Styles/StyleProfilesWorkshop/03_AMOProgressionBar.css
+*/
+
+.process-wrap {
+  width: 100%;
+}
+
+.process-main {
+  display: flex;
+}
+
+.col-3 {
+  width: 30%;
+  position: relative;
+}
+
+.process-main .col-3:not(:first-child):before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 100%; /**/
+	height: 4px;
+	top: 33px;
+	left: calc(-47% + 20px);
+	right: 0;
+	background: #ebebeb;
+	border-top: 2px #ebebeb solid;
+	border-bottom: 2px #ebebeb solid;
+	border-left: 2px #ebebeb solid;
+	-o-transition: .4s;
+	-ms-transition: .4s;
+	-moz-transition: .4s;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+.process-step-cont {
+  font-size: 15px;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+}
+
+.process-step {
+  border: 5px #ebebeb solid;
+  border-radius: 100%;
+  line-height: 0;
+  background: #c2c4c7;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  display: flex;
+  color: #fff;
+  width: 38px;
+  height: 35px;
+  font-weight: 700;
+  margin-bottom: 7px;
+  z-index: 4;
+  position:center;
+}
+
+.process-label {
+	color: #c2c4c7;
+	font-weight: 600;
+	width: 100%;
+	text-align: center;
+	color: /*#9E9FA5*/red;
+}
+
+.active-step2 .col-3:first-child,
+.active-step3 .col-3:nth-child(-n+2),
+.active-step4 .col-3:nth-child(-n+3),
+.active-step5 .col-3:nth-child(-n+4),
+.active-step6 .col-3:nth-child(-n+5),
+.active-step7 .col-3:nth-child(-n+6),
+.active-step8 .col-3:nth-child(-n+7),
+.active-step9 .col-3:nth-child(-n+8),
+.active-step10 .col-3:nth-child(-n+9),
+.active-step11 .col-3:nth-child(-n+10),
+.active-step12 .col-3:nth-child(-n+11),
+.active-step13 .col-3:nth-child(-n+12){
+  opacity: 0.5;
+}
+
+
+/*Check inside passed activies*/ 
+.active-step2 .col-3:first-child        .process-step:before,
+.active-step3 .col-3:nth-child(-n+2)    .process-step:before,
+.active-step4 .col-3:nth-child(-n+3)    .process-step:before,
+.active-step5 .col-3:nth-child(-n+4)    .process-step:before,
+.active-step6 .col-3:nth-child(-n+5)    .process-step:before,
+.active-step7 .col-3:nth-child(-n+6)    .process-step:before,
+.active-step8 .col-3:nth-child(-n+7)    .process-step:before,
+.active-step9 .col-3:nth-child(-n+8)    .process-step:before,
+.active-step10 .col-3:nth-child(-n+9)   .process-step:before,
+.active-step11 .col-3:nth-child(-n+10)  .process-step:before,
+.active-step12 .col-3:nth-child(-n+11)  .process-step:before,
+.active-step13 .col-3:nth-child(-n+12)  .process-step:before{
+  content: '\2713';
+  padding: 2px;
+}
+
+/*Color of passed and active*/
+.active-step2 .col-3:nth-child(-n+1) .process-step,
+.active-step2 .col-3:nth-child(-n+1) .process-dots,
+.active-step3 .col-3:nth-child(-n+2) .process-step,
+.active-step3 .col-3:nth-child(-n+2) .process-dots,
+.active-step4 .col-3:nth-child(-n+3) .process-step,
+.active-step4 .col-3:nth-child(-n+3) .process-dots,
+.active-step5 .col-3:nth-child(-n+4) .process-step,
+.active-step5 .col-3:nth-child(-n+4) .process-dots,
+.active-step6 .col-3:nth-child(-n+5) .process-step,
+.active-step6 .col-3:nth-child(-n+5) .process-dots,
+.active-step7 .col-3:nth-child(-n+6) .process-step,
+.active-step7 .col-3:nth-child(-n+6) .process-dots,
+.active-step8 .col-3:nth-child(-n+7) .process-step,
+.active-step8 .col-3:nth-child(-n+7) .process-dots,
+.active-step9 .col-3:nth-child(-n+8) .process-step,
+.active-step9 .col-3:nth-child(-n+8) .process-dots,
+.active-step10 .col-3:nth-child(-n+9) .process-step,
+.active-step10 .col-3:nth-child(-n+9) .process-dots,
+.active-step11 .col-3:nth-child(-n+10) .process-step,
+.active-step11 .col-3:nth-child(-n+10) .process-dots,
+.active-step12 .col-3:nth-child(-n+11) .process-step,
+.active-step12 .col-3:nth-child(-n+11) .process-dots,
+.active-step13 .col-3:nth-child(-n+12) .process-step,
+.active-step13 .col-3:nth-child(-n+12) .process-dots{
+  background-color: #043a4a;
+}
+
+/* Label Colors */
+.active-step2 .col-3:nth-child(-n+1) .process-label,
+.active-step3 .col-3:nth-child(-n+2) .process-label,
+.active-step4 .col-3:nth-child(-n+3) .process-label,
+.active-step5 .col-3:nth-child(-n+4) .process-label,
+.active-step6 .col-3:nth-child(-n+5) .process-label,
+.active-step7 .col-3:nth-child(-n+6) .process-label,
+.active-step8 .col-3:nth-child(-n+7) .process-label,
+.active-step9 .col-3:nth-child(-n+8) .process-label,
+.active-step10 .col-3:nth-child(-n+9) .process-label,
+.active-step11 .col-3:nth-child(-n+10) .process-label,
+.active-step12 .col-3:nth-child(-n+11) .process-label,
+.active-step13 .col-3:nth-child(-n+12) .process-label{
+  color: #043a4a;
+}
+
+/* Inside passed process step */
+.active-step2 .col-3:nth-child(-n+2):before,
+.active-step3 .col-3:nth-child(-n+3):before,
+.active-step4 .col-3:nth-child(-n+4):before,
+.active-step5 .col-3:nth-child(-n+5):before,
+.active-step6 .col-3:nth-child(-n+6):before,
+.active-step7 .col-3:nth-child(-n+7):before,
+.active-step8 .col-3:nth-child(-n+8):before,
+.active-step9 .col-3:nth-child(-n+9):before,
+.active-step10 .col-3:nth-child(-n+10):before,
+.active-step11 .col-3:nth-child(-n+11):before,
+.active-step12 .col-3:nth-child(-n+12):before,
+.active-step13 .col-3:nth-child(-n+13):before{
+  background: #043a4a !important;
+}
+
+.active-step1 .col-3:nth-child(1) .process-label,
+.active-step2 .col-3:nth-child(2) .process-label,
+.active-step3 .col-3:nth-child(3) .process-label,
+.active-step4 .col-3:nth-child(4) .process-label,
+.active-step5 .col-3:nth-child(5) .process-label,
+.active-step6 .col-3:nth-child(6) .process-label,
+.active-step7 .col-3:nth-child(7) .process-label,
+.active-step8 .col-3:nth-child(8) .process-label,
+.active-step9 .col-3:nth-child(9) .process-label,
+.active-step10 .col-3:nth-child(10) .process-label,
+.active-step11 .col-3:nth-child(11) .process-label,
+.active-step12 .col-3:nth-child(12) .process-label,
+.active-step13 .col-3:nth-child(13) .process-label{
+  color: #BBD032;
+}
+
+.active-step1 .col-3:nth-child(1) .process-step,
+.active-step1 .col-3:nth-child(1) .process-dots,
+.active-step2 .col-3:nth-child(2) .process-step,
+.active-step2 .col-3:nth-child(2) .process-dots,
+.active-step3 .col-3:nth-child(3) .process-step,
+.active-step3 .col-3:nth-child(3) .process-dots,
+.active-step4 .col-3:nth-child(4) .process-step,
+.active-step4 .col-3:nth-child(4) .process-dots,
+.active-step5 .col-3:nth-child(5) .process-step,
+.active-step5 .col-3:nth-child(5) .process-dots,
+.active-step6 .col-3:nth-child(6) .process-step,
+.active-step6 .col-3:nth-child(6) .process-dots,
+.active-step7 .col-3:nth-child(7) .process-step,
+.active-step7 .col-3:nth-child(7) .process-dots,
+.active-step8 .col-3:nth-child(8) .process-step,
+.active-step8 .col-3:nth-child(8) .process-dots,
+.active-step9 .col-3:nth-child(9) .process-step,
+.active-step9 .col-3:nth-child(9) .process-dots,
+.active-step10 .col-3:nth-child(10) .process-step,
+.active-step10 .col-3:nth-child(10) .process-dots,
+.active-step11 .col-3:nth-child(11) .process-step,
+.active-step11 .col-3:nth-child(11) .process-dots,
+.active-step12 .col-3:nth-child(12) .process-step,
+.active-step12 .col-3:nth-child(12) .process-dots,
+.active-step13 .col-3:nth-child(13) .process-step,
+.active-step13 .col-3:nth-child(13) .process-dots{
+  background-color: var(--amo-selected-color);
+}
+
+.process-step.step-3.done:before,
+.process-step.step-4.done:before,
+.process-step.step-5.done:before,
+.process-step.step-6.done:before,
+.process-step.step-7.done:before,
+.process-step.step-8.done:before{
+  content: '\2713'; 
+}
+
+.active-step3 .process-step.parallel{
+  background-color:  var(--amo-selected-color);
+}
+.active-step3 .process-label.parallel{
+  color: var(--amo-selected-color);
+}
+
+.process-label.step-3.done,
+.process-label.step-4.done,
+.process-label.step-5.done,
+.process-label.step-6.done,
+.process-label.step-7.done,
+.process-label.step-8.done{
+  color: #043a4a !important;/* Set the text color for done steps */
+}
+
+.process-step.step-3.done,
+.process-step.step-4.done,
+.process-step.step-5.done,
+.process-step.step-6.done,
+.process-step.step-7.done,
+.process-step.step-8.done{
+  background-color: #043a4a !important; /* Set the background color for done steps */ 
+  opacity: 1;
+}
+
+.process-group {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.process-group .process-step-cont {
+  align-items: center;
+}
+
+	.process-group .process-step {
+		border-radius: 20px; /* Set border-radius for rectangle shape */
+		width: 200px; /* Adjust width for rectangle shape */
+		height: 40px; /* Adjust height for rectangle shape */
+		margin-bottom: 5px; /* Add some spacing between steps */
+		margin-top: 15px;
+	}
+
+.process-group .process-label {
+  color: #043a4a;
+  font-weight: bold;
+}
+
+.process-group .process-step.step-1:before,
+.process-group .process-step.step-2:before,
+.process-group .process-step.step-3:before,
+.process-group .process-step.step-4:before,
+.process-group .process-step.step-5:before,
+.process-group .process-step.step-6:before,
+.process-group .process-step.step-7:before,
+.process-group .process-step.step-8:before,
+.process-group .process-step.step-9:before,
+.process-group .process-step.step-10:before,
+.process-group .process-step.step-11:before,
+.process-group .process-step.step-12:before,
+.process-group .process-step.step-13:before{
+  content: ""; /* Remove checkmark content for major steps */
+  position: relative;
+}
+
+
+
+/*------------------------------------------ NEW CSS ---------------*/
+
+
+
+.custom-progress-stepper {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	list-style-type: none;
+	padding: 0;
+}
+
+.custom-progress-stepper .step {
+	display: flex;
+	align-items: center;
+	position: relative;
+	min-width: 220px;
+	min-height: 50px;
+}
+
+.custom-progress-stepper .step-number {
+	min-width: 30px;
+	min-height: 30px;
+	border-radius: 50%;
+	background-color: #043a4a75;
+	color: #FFFFFF;
+	line-height: 20px; /* Adjust line-height to match circle size */
+	font-size: 12px;
+	text-align: center;
+	margin-right: 8px; /* Add margin-right for spacing */
+  line-height:2.5;
+  border: 4px solid #ebebeb;
+}
+
+
+.custom-progress-stepper .step-name {
+	font-weight: bold;	
+	color: #043a4a75;
+}
+
+.custom-progress-stepper .step-info {    
+	color: #043a4a75;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.005em;
+    text-align: left;
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 28px;
+}
+
+/* Line between steps */
+.custom-progress-stepper .step:not(:last-child)::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: #003F2D26;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+/* Active step */
+.custom-progress-stepper.active-step1 .step:nth-child(1) .step-info, 
+.custom-progress-stepper.active-step2 .step:nth-child(2) .step-info, 
+.custom-progress-stepper.active-step3 .step:nth-child(3) .step-info,
+.custom-progress-stepper.active-step4 .step:nth-child(4) .step-info,
+.custom-progress-stepper.active-step5 .step:nth-child(5) .step-info, 
+.custom-progress-stepper.active-step6 .step:nth-child(6) .step-info,
+.custom-progress-stepper.active-step7 .step:nth-child(7) .step-info,
+.custom-progress-stepper.active-step8 .step:nth-child(8) .step-info,
+.custom-progress-stepper.active-step9 .step:nth-child(9) .step-info,
+.custom-progress-stepper.active-step10 .step:nth-child(10) .step-info {
+	color: #043a4a99;
+}
+
+.custom-progress-stepper.active-step1 .step:nth-child(1) .step-name, 
+.custom-progress-stepper.active-step2 .step:nth-child(2) .step-name, 
+.custom-progress-stepper.active-step3 .step:nth-child(3) .step-name,
+.custom-progress-stepper.active-step4 .step:nth-child(4) .step-name,
+.custom-progress-stepper.active-step5 .step:nth-child(5) .step-name, 
+.custom-progress-stepper.active-step6 .step:nth-child(6) .step-name,
+.custom-progress-stepper.active-step7 .step:nth-child(7) .step-name,
+.custom-progress-stepper.active-step8 .step:nth-child(8) .step-name,
+.custom-progress-stepper.active-step9 .step:nth-child(9) .step-name,
+.custom-progress-stepper.active-step10 .step:nth-child(10) .step-name {
+	color: var(--amo-selected-color);
+}
+.custom-progress-stepper.active-step1 .step:nth-child(1) .step-number, 
+.custom-progress-stepper.active-step2 .step:nth-child(2) .step-number, 
+.custom-progress-stepper.active-step3 .step:nth-child(3) .step-number,
+.custom-progress-stepper.active-step4 .step:nth-child(4) .step-number,
+.custom-progress-stepper.active-step5 .step:nth-child(5) .step-number, 
+.custom-progress-stepper.active-step6 .step:nth-child(6) .step-number,
+.custom-progress-stepper.active-step7 .step:nth-child(7) .step-number,
+.custom-progress-stepper.active-step8 .step:nth-child(8) .step-number,
+.custom-progress-stepper.active-step9 .step:nth-child(9) .step-number,
+.custom-progress-stepper.active-step10 .step:nth-child(10) .step-number {
+	background-color: var(--amo-selected-color);
+}
+
+/* Completed steps */
+.custom-progress-stepper.active-step1 .step:nth-child(-n + 0) .step-info,
+.custom-progress-stepper.active-step2 .step:nth-child(-n + 1) .step-info,
+.custom-progress-stepper.active-step3 .step:nth-child(-n + 2) .step-info,
+.custom-progress-stepper.active-step4 .step:nth-child(-n + 3) .step-info,
+.custom-progress-stepper.active-step5 .step:nth-child(-n + 4) .step-info,
+.custom-progress-stepper.active-step6 .step:nth-child(-n + 5) .step-info,
+.custom-progress-stepper.active-step7 .step:nth-child(-n + 6) .step-info,
+.custom-progress-stepper.active-step8 .step:nth-child(-n + 7) .step-info,
+.custom-progress-stepper.active-step9 .step:nth-child(-n + 8) .step-info,
+.custom-progress-stepper.active-step10 .step:nth-child(-n + 9) .step-info{
+	color: #043a4a99;
+}
+
+.custom-progress-stepper.active-step1 .step:nth-child(-n + 0) .step-name,
+.custom-progress-stepper.active-step2 .step:nth-child(-n + 1) .step-name,
+.custom-progress-stepper.active-step3 .step:nth-child(-n + 2) .step-name,
+.custom-progress-stepper.active-step4 .step:nth-child(-n + 3) .step-name,
+.custom-progress-stepper.active-step5 .step:nth-child(-n + 4) .step-name,
+.custom-progress-stepper.active-step6 .step:nth-child(-n + 5) .step-name,
+.custom-progress-stepper.active-step7 .step:nth-child(-n + 6) .step-name,
+.custom-progress-stepper.active-step8 .step:nth-child(-n + 7) .step-name,
+.custom-progress-stepper.active-step9 .step:nth-child(-n + 8) .step-name,
+.custom-progress-stepper.active-step10 .step:nth-child(-n + 9) .step-name{
+	color: #043a4a;
+}
+.custom-progress-stepper.active-step1 .step:nth-child(-n + 0) .step-number,
+.custom-progress-stepper.active-step2 .step:nth-child(-n + 1) .step-number,
+.custom-progress-stepper.active-step3 .step:nth-child(-n + 2) .step-number,
+.custom-progress-stepper.active-step4 .step:nth-child(-n + 3) .step-number,
+.custom-progress-stepper.active-step5 .step:nth-child(-n + 4) .step-number,
+.custom-progress-stepper.active-step6 .step:nth-child(-n + 5) .step-number,
+.custom-progress-stepper.active-step7 .step:nth-child(-n + 6) .step-number,
+.custom-progress-stepper.active-step8 .step:nth-child(-n + 7) .step-number,
+.custom-progress-stepper.active-step9 .step:nth-child(-n + 8) .step-number,
+.custom-progress-stepper.active-step10 .step:nth-child(-n + 9) .step-number{
+	background-color: #043a4a;
+}
+
+.custom-progress-stepper.active-step1 .step:nth-child(-n + 0) .step-number::before,
+.custom-progress-stepper.active-step2 .step:nth-child(-n + 1) .step-number::before,
+.custom-progress-stepper.active-step3 .step:nth-child(-n + 2) .step-number::before,
+.custom-progress-stepper.active-step4 .step:nth-child(-n + 3) .step-number::before,
+.custom-progress-stepper.active-step5 .step:nth-child(-n + 4) .step-number::before,
+.custom-progress-stepper.active-step6 .step:nth-child(-n + 5) .step-number::before,
+.custom-progress-stepper.active-step7 .step:nth-child(-n + 6) .step-number::before,
+.custom-progress-stepper.active-step8 .step:nth-child(-n + 7) .step-number::before,
+.custom-progress-stepper.active-step9 .step:nth-child(-n + 8) .step-number::before,
+.custom-progress-stepper.active-step10 .step:nth-child(-n + 9) .step-number::before {
+	content: "\2713 "; /* Unicode checkmark character */
+}
+
+.custom-progress-stepper .step.warning .step-number{
+	background-color: #FF543E !important;
+}
+.custom-progress-stepper .step.warning .step-number::before{
+	content: "!"; 
+}
+
+.custom-progress-stepper .step.completed .step-number{
+	background-color: #50AF78 !important;
+}
+.custom-progress-stepper .step.completed .step-number::before{
+	content: "\2713";
+}
+
+
+/* Major Step Group */
+.custom-progress-stepper .step.stepGroup .step-number {
+  min-width: 135px;
+  min-height: 40px;
+  border-radius:12px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 40px;
+  border: 5px solid #ebebeb;
+}
+
+
+
+
+.amo-yellow .custom-progress-stepper{
+	flex-direction: row-reverse;
+}
+.amo-yellow .step{
+	flex-direction: row-reverse;
+}
