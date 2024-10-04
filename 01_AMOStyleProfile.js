@@ -18,7 +18,7 @@ $(document).ready(function() {
     registerEventTitleChanged();    // Register an event to change the document title based on the AMO banner content
     renderElementsAboveAndBelowTabs(); // Render custom elements above and below the tabs
     renderGoogleIcons();            // Add Google icons to the page
-});
+});    
  
 // Function to enable and apply the theme to various elements
 const enableTheme = () => {
