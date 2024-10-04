@@ -24,22 +24,22 @@
 .theme-entry.amo.amo-purple{
 	--amo-selected-color: var(--amo-purple);
 	--amo-selected-color-2: var(--amo-light-purple);
-	--amo-background-url: url("/Runtime/Styles/AMOStyleProfile/backgrounds/purple.jpg");
+	--amo-background-url: url("purple.jpg");
 }
 .theme-entry.amo.amo-red{
 	--amo-selected-color: var(--amo-red);
 	--amo-selected-color-2: var(--amo-light-red);
-	--amo-background-url: url("/Runtime/Styles/AMOStyleProfile/backgrounds/red.jpg");
+	--amo-background-url: url("red.jpg");
 }
 .theme-entry.amo.amo-orange{
 	--amo-selected-color: var(--amo-orange);
 	--amo-selected-color-2: var(--amo-light-orange);
-	--amo-background-url: url("/Runtime/Styles/AMOStyleProfile/backgrounds/orange.jpg");
+	--amo-background-url: url("orange.jpg");
 }
 .theme-entry.amo.amo-yellow{
 	--amo-selected-color: var(--amo-yellow);
 	--amo-selected-color-2: var(--amo-light-yellow);
-	--amo-background-url: url("/Runtime/Styles/AMOStyleProfile/backgrounds/yellow.jpg");
+	--amo-background-url: url("yellow.jpg");
 }
 
 /* Body Background */
